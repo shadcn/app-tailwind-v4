@@ -1,101 +1,277 @@
-import Image from "next/image";
+import { ModeToggle } from "@/components/mode-toggle"
+import { AccordionDemo } from "@/components/sink/accordion-demo"
+import { AlertDemo } from "@/components/sink/alert-demo"
+import { AlertDialogDemo } from "@/components/sink/alert-dialog-demo"
+import { AppSidebar } from "@/components/sink/app-sidebar"
+import { AspectRatioDemo } from "@/components/sink/aspect-ratio-demo"
+import { AvatarDemo } from "@/components/sink/avatar-demo"
+import { BadgeDemo } from "@/components/sink/badge-demo"
+import { BadgeDestructive } from "@/components/sink/badge-destructive"
+import { BadgeOutline } from "@/components/sink/badge-outline"
+import { BadgeSecondary } from "@/components/sink/badge-secondary"
+import { BreadcrumbDemo } from "@/components/sink/breadcrumb-demo"
+import { ButtonDemo } from "@/components/sink/button-demo"
+import { ButtonDestructive } from "@/components/sink/button-destructive"
+import { ButtonGhost } from "@/components/sink/button-ghost"
+import { ButtonLink } from "@/components/sink/button-link"
+import { ButtonLoading } from "@/components/sink/button-loading"
+import { ButtonOutline } from "@/components/sink/button-outline"
+import { ButtonSecondary } from "@/components/sink/button-secondary"
+import { ButtonWithIcon } from "@/components/sink/button-with-icon"
+import { CalendarDemo } from "@/components/sink/calendar-demo"
+import { CardDemo } from "@/components/sink/card-demo"
+import { CarouselDemo } from "@/components/sink/carousel-demo"
+import { CheckboxDemo } from "@/components/sink/checkbox-demo"
+import { CollapsibleDemo } from "@/components/sink/collapsible-demo"
+import { ComboboxDemo } from "@/components/sink/combobox-demo"
+import { CommandDemo } from "@/components/sink/command-demo"
+import { ComponentWrapper } from "@/components/sink/component-wrapper"
+import { ContextMenuDemo } from "@/components/sink/context-menu-demo"
+import { DatePickerDemo } from "@/components/sink/date-picker-demo"
+import { DialogDemo } from "@/components/sink/dialog-demo"
+import { DrawerDemo } from "@/components/sink/drawer-demo"
+import { DropdownMenuDemo } from "@/components/sink/dropdown-menu-demo"
+import { HoverCardDemo } from "@/components/sink/hover-card-demo"
+import { InputDemo } from "@/components/sink/input-demo"
+import { InputOTPDemo } from "@/components/sink/input-otp-demo"
+import { LabelDemo } from "@/components/sink/label-demo"
+import { MenubarDemo } from "@/components/sink/menubar-demo"
+import { NavigationMenuDemo } from "@/components/sink/navigation-menu-demo"
+import { PaginationDemo } from "@/components/sink/pagination-demo"
+import { PopoverDemo } from "@/components/sink/popover-demo"
+import { ProgressDemo } from "@/components/sink/progress-demo"
+import { RadioGroupDemo } from "@/components/sink/radio-group-demo"
+import { ResizableHandleDemo } from "@/components/sink/resizable-handle"
+import { ScrollAreaDemo } from "@/components/sink/scroll-area-demo"
+import { SelectDemo } from "@/components/sink/select-demo"
+import { SeparatorDemo } from "@/components/sink/separator-demo"
+import { SheetDemo } from "@/components/sink/sheet-demo"
+import { SkeletonDemo } from "@/components/sink/skeleton-demo"
+import { SliderDemo } from "@/components/sink/slider-demo"
+import { SonnerDemo } from "@/components/sink/sonner-demo"
+import { SwitchDemo } from "@/components/sink/switch-demo"
+import { TableDemo } from "@/components/sink/table-demo"
+import { TabsDemo } from "@/components/sink/tabs-demo"
+import { TextareaDemo } from "@/components/sink/textarea-demo"
+import { ToastDemo } from "@/components/sink/toast-demo"
+import { ToggleDemo } from "@/components/sink/toggle-demo"
+import { ToggleDisabled } from "@/components/sink/toggle-disabled"
+import { ToggleGroupDemo } from "@/components/sink/toggle-group-demo"
+import { ToggleOutline } from "@/components/sink/toggle-outline"
+import { ToggleWithText } from "@/components/sink/toggle-with-text"
+import { TooltipDemo } from "@/components/sink/tooltip-demo"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Separator } from "@/components/ui/separator"
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          <div className="flex items-center gap-2 px-4 w-full">
+            <SidebarTrigger className="-ml-1" />
+            <Separator orientation="vertical" className="mr-2 h-4" />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem className="hidden md:block">
+                  <BreadcrumbLink href="#">
+                    Building Your Application
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="hidden md:block" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            <div className="flex items-center gap-2 ml-auto">
+              <ModeToggle />
+            </div>
+          </div>
+        </header>
+        <div className="flex flex-1 flex-col gap-4 p-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ComponentWrapper name="Accordion">
+              <AccordionDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Alert">
+              <AlertDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="AlertDialog">
+              <AlertDialogDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="AspectRatio">
+              <AspectRatioDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Avatar">
+              <AvatarDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Badge">
+              <BadgeDemo />
+              <BadgeDestructive />
+              <BadgeOutline />
+              <BadgeSecondary />
+            </ComponentWrapper>
+            <ComponentWrapper name="Breadcrumb">
+              <BreadcrumbDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Button">
+              <div className="flex items-center gap-2">
+                <ButtonDemo />
+                <ButtonDestructive />
+                <ButtonGhost />
+                <ButtonLink />
+              </div>
+              <div className="flex items-center gap-2">
+                <ButtonLoading />
+                <ButtonOutline />
+                <ButtonSecondary />
+              </div>
+              <div className="flex items-center gap-2">
+                <ButtonWithIcon />
+              </div>
+            </ComponentWrapper>
+            <ComponentWrapper name="Calendar">
+              <CalendarDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Card">
+              <CardDemo className="w-full" />
+            </ComponentWrapper>
+            <ComponentWrapper
+              name="Carousel"
+              className="[&_.max-w-xs]:max-w-[70%]"
+            >
+              <CarouselDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Checkbox">
+              <CheckboxDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Collapsible">
+              <CollapsibleDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Combobox">
+              <ComboboxDemo />
+            </ComponentWrapper>
+            <ComponentWrapper
+              name="Command"
+              className="[&_[cmdk-root]]:md:min-w-max"
+            >
+              <CommandDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="ContextMenu">
+              <ContextMenuDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="DatePicker">
+              <DatePickerDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Dialog">
+              <DialogDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Drawer">
+              <DrawerDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="DropdownMenu">
+              <DropdownMenuDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="HoverCard">
+              <HoverCardDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Input">
+              <InputDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="InputOTP">
+              <InputOTPDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Label">
+              <LabelDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Menubar">
+              <MenubarDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="NavigationMenu" className="col-span-2">
+              <NavigationMenuDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Pagination">
+              <PaginationDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Popover">
+              <PopoverDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Progress">
+              <ProgressDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="RadioGroup">
+              <RadioGroupDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Resizable" className="col-span-2">
+              <ResizableHandleDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="ScrollArea">
+              <ScrollAreaDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Select">
+              <SelectDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Separator">
+              <SeparatorDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Sheet">
+              <SheetDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Skeleton">
+              <SkeletonDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Slider">
+              <SliderDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Sonner">
+              <SonnerDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Switch">
+              <SwitchDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Table" className="col-span-2">
+              <TableDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Tabs">
+              <TabsDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Textarea">
+              <TextareaDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Toast">
+              <ToastDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Toggle">
+              <div className="flex items-center gap-2">
+                <ToggleDemo />
+                <ToggleDisabled />
+                <ToggleOutline />
+                <ToggleWithText />
+              </div>
+            </ComponentWrapper>
+            <ComponentWrapper name="ToggleGroup">
+              <ToggleGroupDemo />
+            </ComponentWrapper>
+            <ComponentWrapper name="Tooltip">
+              <TooltipDemo />
+            </ComponentWrapper>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </SidebarInset>
+    </SidebarProvider>
+  )
 }
