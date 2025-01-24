@@ -74,6 +74,8 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { Toaster } from "sonner"
+import { Toaster as ShadcnToaster } from "@/components/ui/toaster"
 
 export default function Home() {
   return (
@@ -103,6 +105,7 @@ export default function Home() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
+          <Toaster/>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <ComponentWrapper name="Accordion">
               <AccordionDemo />
@@ -270,6 +273,7 @@ export default function Home() {
               <TooltipDemo />
             </ComponentWrapper>
           </div>
+          <ShadcnToaster/>
         </div>
       </SidebarInset>
     </SidebarProvider>
